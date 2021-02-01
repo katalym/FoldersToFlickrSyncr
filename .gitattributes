@@ -1,0 +1,68 @@
+# to resolve merge conflicts
+ReleaseNotes.md merge=ours
+ReleaseNotes.txt merge=ours
+
+# Set the default behavior, in case people don't have core.autocrlf set
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted to native line endings on checkout
+
+# Declare files that will always have LF line endings on checkout
+*.sh text eol=lf
+
+# Declare files that will always have CRLF line endings on checkout
+*.bat text eol=crlf
+*.cfg text eol=crlf
+*.classes text eol=crlf
+*.cmd text eol=crlf
+*.conf text eol=crlf
+*.config text eol=crlf
+*.cpp text eol=crlf
+*.dfm text eol=crlf
+*.dpk text eol=crlf
+*.dpr text eol=crlf
+*.dproj text eol=crlf
+*.dsk text eol=crlf
+*.excludedfiles text eol=crlf
+*.gsl text eol=crlf
+*.inc text eol=crlf
+*.info text eol=crlf
+#*.ini text eol=crlf
+*.pas text eol=crlf
+*.rc text eol=crlf
+*.ridl text eol=crlf
+*.sql text eol=crlf
+*.template text eol=crlf
+*.txt text eol=crlf
+*.vcproj text eol=crlf
+*.wsf text eol=crlf
+# Denote all files that are truly binary and should not be modified
+*.adm binary
+*.aqt binary
+*.bmp binary
+*.bpl binary
+*.chm binary
+*.dat binary
+*.dcr binary
+*.dll binary
+*.doc binary
+*.docx binary
+*.exe binary
+*.fdb binary
+*.gif binary
+*.hlp binary
+*.ico binary
+*.lib binary
+*.msi binary
+*.obj binary
+*.pfx binary
+*.png binary
+*.r16 binary
+*.r32 binary
+*.rar binary
+*.res binary
+*.tlb binary
+*.ttf binary
+*.xls binary
+*.xlsx binary
+*.zlib binary
