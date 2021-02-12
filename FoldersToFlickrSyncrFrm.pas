@@ -1653,7 +1653,8 @@ var
   end;
 
 var
-  i: integer;
+  i, vHeight, vWidth, vLeft, vTop, vMonitorNo: integer;
+  vMonitor: TMonitor;
   s, vLastUserID: string;
   vUserIDList: TStringList;
 begin
@@ -1706,22 +1707,33 @@ begin
       i := 0;
     pcPages.ActivePageIndex := i;
 
-    ClientHeight := vIniFile.ReadInteger(vSection, 'ClientHeight', ClientHeight);
-    ClientWidth := vIniFile.ReadInteger(vSection, 'ClientWidth', ClientWidth);
+    vHeight := vIniFile.ReadInteger(vSection, 'Height', Height);
+    vWidth := vIniFile.ReadInteger(vSection, 'Width', Width);
+    vLeft := vIniFile.ReadInteger(vSection, 'Left', (Monitor.Left + Monitor.Width - vWidth) div 2);
+    vTop := vIniFile.ReadInteger(vSection, 'Top', (Monitor.Top + Monitor.Height - vHeight) div 2);
+    vMonitorNo := vIniFile.ReadInteger(vSection, 'MonitorNo', Monitor.MonitorNum);
 
-    Left := (Monitor.Left + Monitor.Width - Width) div 2;
-    Top := (Monitor.Top + Monitor.Height - Height) div 2;
+    if (vMonitorNo < 0) or (vMonitorNo > Screen.MonitorCount) then
+    begin
+      vMonitorNo := 0;
+      while vMonitorNo < Screen.MonitorCount do begin
+        if Screen.Monitors[vMonitorNo].Primary then
+          Break;
+      end;
+    end;
 
-    Left := vIniFile.ReadInteger(vSection, 'Left', Left);
-    if Left < Monitor.Left then
-      Left := Monitor.Left;
-    if Left > Monitor.Left + Monitor.Width - Width then
-      Left := Monitor.Left + Monitor.Width - Width;
-    Top := vIniFile.ReadInteger(vSection, 'Top', Top);
-    if Top < Monitor.Top then
-      Top := Monitor.Top;
-    if Top > Monitor.Top + Monitor.Height - Height then
-      Top := Monitor.Top + Monitor.Height - Height;
+    vMonitor := Screen.Monitors[vMonitorNo];
+
+    if vLeft < vMonitor.Left then
+      vLeft := vMonitor.Left;
+    if vLeft > vMonitor.Left + vMonitor.Width - vWidth then
+      vLeft := vMonitor.Left + vMonitor.Width - vWidth;
+    if vTop < vMonitor.Top then
+      vTop := vMonitor.Top;
+    if vTop > vMonitor.Top + vMonitor.Height - vHeight then
+      vTop := vMonitor.Top + vMonitor.Height - vHeight;
+
+    Self.SetBounds(vLeft, vTop, vWidth, vHeight);
 
     VerifierPIN := _ReadLabeledEdit(edtVerifierPIN);
     RequestToken := _ReadLabeledEdit(edtRequestToken);
@@ -1872,8 +1884,9 @@ begin
 
     vIniFile.WriteInteger(vSection, 'Left', Left);
     vIniFile.WriteInteger(vSection, 'Top', Top);
-    vIniFile.WriteInteger(vSection, 'ClientHeight', ClientHeight);
-    vIniFile.WriteInteger(vSection, 'ClientWidth', ClientWidth);
+    vIniFile.WriteInteger(vSection, 'Height', Height);
+    vIniFile.WriteInteger(vSection, 'Width', Width);
+    vIniFile.WriteInteger(vSection, 'MonitorNo', Monitor.MonitorNum);
     vIniFile.WriteInteger(vSection, pcPages.Name, pcPages.ActivePageIndex);
     vIniFile.WriteInteger(vSection, grbPhotoResponse.Name, grbPhotoResponse.Height);
 //    vIniFile.WriteInteger(vSection, pnlTopFolders.Name, pnlTopFolders.Width);

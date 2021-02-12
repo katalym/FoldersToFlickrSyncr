@@ -2792,9 +2792,9 @@ begin
         if gDoSaveResizedPhotos then
           FResizedPhotoFileName := IncludeTrailingPathDelimiter(FResizedPhotoFileName) + ExtractFileName(FPhotoFileName)
         else
-          FResizedPhotoFileName := TPath.GetTempFileName + '.jpg';
+          FResizedPhotoFileName := TPath.GetTempPath + '$tmp$' + ImageUniqueID + '.jpg';
       end else begin
-        FResizedPhotoFileName := TPath.GetTempFileName + '.jpg';
+        FResizedPhotoFileName := TPath.GetTempPath + '$tmp$' + ImageUniqueID + '.jpg';
       end;
 
       vNewBitmap := TBitmap.Create;

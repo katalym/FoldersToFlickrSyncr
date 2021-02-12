@@ -748,7 +748,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
               AlignWithMargins = True
               Left = 10
               Top = 69
-              Width = 252
+              Width = 228
               Height = 13
               Margins.Left = 8
               Align = alTop
@@ -1913,7 +1913,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
             AlignWithMargins = True
             Left = 3
             Top = 674
-            Width = 378
+            Width = 76
             Height = 13
             Align = alBottom
             Alignment = taCenter
