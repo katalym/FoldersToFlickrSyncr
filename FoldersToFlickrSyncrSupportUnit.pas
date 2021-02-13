@@ -553,7 +553,7 @@ var
   gAlbumsCreated: Int64 = 0;
   gErrors: Int64 = 0;
   gResolvedErrors: Int64 = 0;
-  gSyncronizationTime: TDateTime;
+  gSynchronizationTime: TDateTime;
   gDoNotUnlinkUnknownPhotosFromAlbum: Boolean;
   gSetImageDescription: boolean;
   gPriorityPermissionsFlickr: boolean;

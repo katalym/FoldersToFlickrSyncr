@@ -1,7 +1,7 @@
 object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
   Left = 0
   Top = 0
-  Caption = 'Folders To Flickr Syncronization (FoldersToFlickrSyncr)'
+  Caption = 'Folders To Flickr Synchronization (FoldersToFlickrSyncr)'
   ClientHeight = 804
   ClientWidth = 1070
   Color = clBtnFace
@@ -75,7 +75,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
       ShowHint = True
       TabOrder = 0
     end
-    object btnCancelSyncronization: TButton
+    object btnCancelSynchronization: TButton
       AlignWithMargins = True
       Left = 766
       Top = 7
@@ -85,13 +85,13 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
       Margins.Top = 7
       Margins.Right = 6
       Margins.Bottom = 7
-      Action = actCancelSyncronization
+      Action = actCancelSynchronization
       Align = alRight
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
     end
-    object btnSyncronize: TButton
+    object btnSynchronize: TButton
       AlignWithMargins = True
       Left = 909
       Top = 7
@@ -101,7 +101,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
       Margins.Top = 7
       Margins.Right = 6
       Margins.Bottom = 7
-      Action = actSyncronize
+      Action = actSynchronize
       Align = alRight
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -1378,23 +1378,23 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 1
-            object grbTopFoldersToSyncronize: TGroupBox
+            object grbTopFoldersToSynchronize: TGroupBox
               AlignWithMargins = True
               Left = 3
               Top = 3
               Width = 526
               Height = 410
               Align = alClient
-              Caption = ' Local Folders To Syncronize (subfolders included) '
+              Caption = ' Local Folders To Synchronize (subfolders included) '
               TabOrder = 0
-              object lstTopFoldersToSyncronize: TListBox
+              object lstTopFoldersToSynchronize: TListBox
                 Left = 2
                 Top = 90
                 Width = 522
                 Height = 318
                 Align = alClient
                 ItemHeight = 13
-                PopupMenu = mnuTopFoldersToSyncronize
+                PopupMenu = mnuTopFoldersToSynchronize
                 Sorted = True
                 TabOrder = 1
               end
@@ -1408,7 +1408,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
                 Color = clMoneyGreen
                 ParentBackground = False
                 TabOrder = 0
-                object btnRemoveFolderFromSyncronization: TButton
+                object btnRemoveFolderFromSynchronization: TButton
                   AlignWithMargins = True
                   Left = 151
                   Top = 7
@@ -1416,7 +1416,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
                   Height = 25
                   Margins.Top = 7
                   Margins.Bottom = 7
-                  Action = actRemoveFolderFromSyncronization
+                  Action = actRemoveFolderFromSynchronization
                   ParentShowHint = False
                   ShowHint = True
                   TabOrder = 1
@@ -1627,13 +1627,13 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
           end
         end
       end
-      object tbsSyncronizationMonitor: TTabSheet
-        Hint = 'Syncronization'
-        Caption = 'Syncronization'
+      object tbsSynchronizationMonitor: TTabSheet
+        Hint = 'Synchronization'
+        Caption = 'Synchronization'
         ImageIndex = 5
         ParentShowHint = False
         ShowHint = True
-        object pnlSyncronizationJob: TPanel
+        object pnlSynchronizationJob: TPanel
           Left = 0
           Top = 0
           Width = 826
@@ -1658,7 +1658,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
             Align = alClient
             Caption = ' Photos/Albums Processed '
             TabOrder = 0
-            object memSyncronizatioLog: TMemo
+            object memSynchronizatioLog: TMemo
               Left = 2
               Top = 15
               Width = 816
@@ -1784,7 +1784,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
           end
         end
       end
-      object tbsFoldersToSyncronize: TTabSheet
+      object tbsFoldersToSynchronize: TTabSheet
         Hint = 'Folders & Albums'
         Caption = 'Folders && Albums'
         ImageIndex = 4
@@ -1812,7 +1812,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
             Height = 13
             Align = alBottom
             Alignment = taCenter
-            Caption = 'Folders To Syncronize: #'
+            Caption = 'Folders To Synchronize: #'
           end
           object lblAlbumsFromFoldersBottom: TLabel
             AlignWithMargins = True
@@ -1888,12 +1888,12 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
                 Top = 7
                 Width = 190
                 Height = 25
-                Hint = 'Scan Local Folders To Syncronize (subfolders included) '
+                Hint = 'Scan Local Folders To Synchronize (subfolders included) '
                 Margins.Top = 7
                 Margins.Bottom = 7
                 Action = actPrepareFolderStructure
                 Align = alLeft
-                Caption = 'Scan Local Folders To Syncronize'
+                Caption = 'Scan Local Folders To Synchronize'
                 ParentShowHint = False
                 ShowHint = True
                 TabOrder = 0
@@ -2778,16 +2778,16 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
         end
       end
     end
-    object grbSyncronizationActivity: TGroupBox
+    object grbSynchronizationActivity: TGroupBox
       AlignWithMargins = True
       Left = 840
       Top = 3
       Width = 227
       Height = 713
       Align = alRight
-      Caption = ' Syncronization Activity '
+      Caption = ' Synchronization Activity '
       TabOrder = 1
-      object pnlSyncronizationActivity: TGridPanel
+      object pnlSynchronizationActivity: TGridPanel
         AlignWithMargins = True
         Left = 2
         Top = 19
@@ -3054,17 +3054,17 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
           end
           item
             Column = 0
-            Control = lblSyncronizationTime
+            Control = lblSynchronizationTime
             Row = 17
           end
           item
             Column = 1
-            Control = edtSyncronizationTime
+            Control = edtSynchronizationTime
             Row = 17
           end
           item
             Column = 2
-            Control = lblSyncronizationTimeDetails
+            Control = lblSynchronizationTimeDetails
             Row = 17
           end
           item
@@ -3850,7 +3850,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
           Align = alRight
           Caption = '...'
         end
-        object lblSyncronizationTime: TLabel
+        object lblSynchronizationTime: TLabel
           AlignWithMargins = True
           Left = 4
           Top = 481
@@ -3861,9 +3861,9 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
           Margins.Right = 4
           Margins.Bottom = 7
           Align = alLeft
-          Caption = 'Syncronization Time:'
+          Caption = 'Synchronization Time:'
         end
-        object edtSyncronizationTime: TEdit
+        object edtSynchronizationTime: TEdit
           AlignWithMargins = True
           Left = 128
           Top = 478
@@ -3879,7 +3879,7 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
           TabOrder = 16
           Text = '0:00'
         end
-        object lblSyncronizationTimeDetails: TLabel
+        object lblSynchronizationTimeDetails: TLabel
           AlignWithMargins = True
           Left = 207
           Top = 481
@@ -4293,22 +4293,22 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
       Hint = 'Add Folder to Sycncronization'
       OnExecute = actAddFolderToSycncronizationExecute
     end
-    object actRemoveFolderFromSyncronization: TAction
+    object actRemoveFolderFromSynchronization: TAction
       Category = 'Folders'
       Caption = 'Remove Folder'
-      Hint = 'Remove selected Folder from Syncronization'
-      OnExecute = actRemoveFolderFromSyncronizationExecute
-      OnUpdate = actRemoveFolderFromSyncronizationUpdate
+      Hint = 'Remove selected Folder from Synchronization'
+      OnExecute = actRemoveFolderFromSynchronizationExecute
+      OnUpdate = actRemoveFolderFromSynchronizationUpdate
     end
     object actPrepareFolderStructure: TAction
       Category = 'Folders'
-      Caption = 'Scan Folders for data to be syncronized'
-      Hint = 'Collect Folders'#39' Data for Syncronization'
+      Caption = 'Scan Folders for data to be Synchronized'
+      Hint = 'Collect Folders'#39' Data for Synchronization'
       OnExecute = actPrepareFolderStructureExecute
       OnUpdate = actPrepareFolderStructureUpdate
     end
     object actLoadFlickrAlbums: TAction
-      Category = 'Syncronization'
+      Category = 'Synchronization'
       Caption = 'Load Albums'
       Hint = 'Load Albums Data from Flickr'
       OnExecute = actLoadFlickrAlbumsExecute
@@ -4337,17 +4337,17 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
       OnExecute = actChangeOrCreateUserExecute
       OnUpdate = actChangeOrCreateUserUpdate
     end
-    object actCancelSyncronization: TAction
-      Category = 'Syncronization'
-      Caption = 'Cancel Syncronization'
-      OnExecute = actCancelSyncronizationExecute
-      OnUpdate = actCancelSyncronizationUpdate
+    object actCancelSynchronization: TAction
+      Category = 'Synchronization'
+      Caption = 'Cancel Synchronization'
+      OnExecute = actCancelSynchronizationExecute
+      OnUpdate = actCancelSynchronizationUpdate
     end
-    object actSyncronize: TAction
-      Category = 'Syncronization'
-      Caption = 'Syncronize'
-      OnExecute = actSyncronizeExecute
-      OnUpdate = actSyncronizeUpdate
+    object actSynchronize: TAction
+      Category = 'Synchronization'
+      Caption = 'Synchronize'
+      OnExecute = actSynchronizeExecute
+      OnUpdate = actSynchronizeUpdate
     end
     object actGetPermissionsFromPiwigoSync: TAction
       Category = 'Settings'
@@ -4443,19 +4443,19 @@ object FoldersToFlickrSyncrForm: TFoldersToFlickrSyncrForm
     SSLOptions.VerifyDepth = 0
     Left = 600
   end
-  object mnuTopFoldersToSyncronize: TPopupActionBar
+  object mnuTopFoldersToSynchronize: TPopupActionBar
     Left = 992
     Top = 56
     object mniAddFoldertoSycncronization: TMenuItem
       Action = actAddFolderToSycncronization
     end
-    object mniRemoveFolderfromSyncronization: TMenuItem
-      Action = actRemoveFolderFromSyncronization
+    object mniRemoveFolderfromSynchronization: TMenuItem
+      Action = actRemoveFolderFromSynchronization
     end
     object N1: TMenuItem
       Caption = '-'
     end
-    object mniCollectFoldersDataforSyncronization: TMenuItem
+    object mniCollectFoldersDataforSynchronization: TMenuItem
       Action = actPrepareFolderStructure
     end
     object N2: TMenuItem

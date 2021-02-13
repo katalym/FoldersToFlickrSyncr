@@ -21,7 +21,7 @@ type
   TFoldersToFlickrSyncrForm = class(TForm)
     aclActions: TActionList;
     actAddFolderToSycncronization: TAction;
-    actCancelSyncronization: TAction;
+    actCancelSynchronization: TAction;
     actChangeOrCreateUser: TAction;
     actClearAccessToken: TAction;
     actClearLogs: TAction;
@@ -38,11 +38,11 @@ type
     actLocateDummyPlaceholder: TAction;
     actLocatePicasaContactsXML: TAction;
     actPrepareFolderStructure: TAction;
-    actRemoveFolderFromSyncronization: TAction;
+    actRemoveFolderFromSynchronization: TAction;
     actReplacingPhotos: TAction;
     actSaveResizedPhotosFolder: TAction;
     actSortAlbums: TAction;
-    actSyncronize: TAction;
+    actSynchronize: TAction;
     actTestEcho: TAction;
     actTestLogin: TAction;
     actTestSelected: TAction;
@@ -51,7 +51,7 @@ type
     BindingsList1: TBindingsList;
     bntGetPermissionsFromPiwigoSync: TButton;
     btnAddFolderToSycncronization: TButton;
-    btnCancelSyncronization: TButton;
+    btnCancelSynchronization: TButton;
     btnChangeUser: TButton;
     btnClearAccessToken: TButton;
     btnClearLogs: TButton;
@@ -66,11 +66,11 @@ type
     btnLocateDummyPlaceholder: TButton;
     btnLocatePicasaContactsXML: TButton;
     btnPrepareFolderStructure: TButton;
-    btnRemoveFolderFromSyncronization: TButton;
+    btnRemoveFolderFromSynchronization: TButton;
     btnReplacingPhotos: TButton;
     btnSaveResizedPhotosFolder: TButton;
     btnSortAlbums: TButton;
-    btnSyncronize: TButton;
+    btnSynchronize: TButton;
     btnTestEcho: TButton;
     btnTestLogin: TButton;
     btnTestSelected: TButton;
@@ -135,7 +135,7 @@ type
     edtRESTEndpointURL: TLabeledEdit;
     edtSaveResizedPhotosFolder: TEdit;
     edtStatusText: TLabeledEdit;
-    edtSyncronizationTime: TEdit;
+    edtSynchronizationTime: TEdit;
     edtThreadsActive: TEdit;
     edtThreadsCompleted: TEdit;
     edtThreadsToRun: TSpinEdit;
@@ -177,8 +177,8 @@ type
     grbPicasaPeopleToAlbum: TGroupBox;
     grbPriorityDescriptionForPhoto: TGroupBox;
     grbResizeRules: TGroupBox;
-    grbSyncronizationActivity: TGroupBox;
-    grbTopFoldersToSyncronize: TGroupBox;
+    grbSynchronizationActivity: TGroupBox;
+    grbTopFoldersToSynchronize: TGroupBox;
     grdThreadsData: TStringGrid;
     IdHTTP1: TIdHTTP;
     IdSSLIOHandlerSocketOpenSSL1: TIdSSLIOHandlerSocketOpenSSL;
@@ -228,8 +228,8 @@ type
     lblStatusBarUserFullName: Tlabel;
     lblStatusBarUserID: Tlabel;
     lblStatusBarUserName: Tlabel;
-    lblSyncronizationTime: TLabel;
-    lblSyncronizationTimeDetails: TLabel;
+    lblSynchronizationTime: TLabel;
+    lblSynchronizationTimeDetails: TLabel;
     lblThreadsActive: TLabel;
     lblThreadsActiveDetails: TLabel;
     lblThreadsCompleted: TLabel;
@@ -247,7 +247,7 @@ type
     lstAlbums: TListBox;
     lstAlbumsFromFolders: TListBox;
     lstAPICalls: TListBox;
-    lstTopFoldersToSyncronize: TListBox;
+    lstTopFoldersToSynchronize: TListBox;
     memActionsLog: TMemo;
     memErrorsLog: TMemo;
     memExcludeFiles: TMemo;
@@ -260,14 +260,14 @@ type
     memResponceContent: TMemo;
     memResponseErrorMessage: TMemo;
     memSortAlbums: TMemo;
-    memSyncronizatioLog: TMemo;
+    memSynchronizatioLog: TMemo;
     mniAddFoldertoSycncronization: TMenuItem;
-    mniCollectFoldersDataforSyncronization: TMenuItem;
+    mniCollectFoldersDataforSynchronization: TMenuItem;
     mniCopycontentintoClipboard: TMenuItem;
     mniCopyToClipboard: TMenuItem;
-    mniRemoveFolderfromSyncronization: TMenuItem;
+    mniRemoveFolderfromSynchronization: TMenuItem;
     mnuPopup: TPopupActionBar;
-    mnuTopFoldersToSyncronize: TPopupActionBar;
+    mnuTopFoldersToSynchronize: TPopupActionBar;
     N1: TMenuItem;
     N2: TMenuItem;
     OAuthAuthenticator: TOAuth1Authenticator;
@@ -312,8 +312,8 @@ type
     pnlStatusBarUserFullName: TPanel;
     pnlStatusBarUserID: TPanel;
     pnlStatusBarUserName: TPanel;
-    pnlSyncronizationActivity: TGridPanel;
-    pnlSyncronizationJob: TPanel;
+    pnlSynchronizationActivity: TGridPanel;
+    pnlSynchronizationJob: TPanel;
     pnlTestButtons: TPanel;
     pnlTestHeader: TPanel;
     pnlTopFolders: TPanel;
@@ -351,7 +351,7 @@ type
     tbsDevelopmentCustomActions: TTabSheet;
     tbsFlickrAPICalls: TTabSheet;
     tbsFlickrSettings: TTabSheet;
-    tbsFoldersToSyncronize: TTabSheet;
+    tbsFoldersToSynchronize: TTabSheet;
     tbsGenerationCode: TTabSheet;
     tbsGenerationMethodInfo: TTabSheet;
     tbsGenerator: TTabSheet;
@@ -361,14 +361,14 @@ type
     tbsResponseContent: TTabSheet;
     tbsResponseErrorMessage: TTabSheet;
     tbsSortAlbums: TTabSheet;
-    tbsSyncronizationMonitor: TTabSheet;
+    tbsSynchronizationMonitor: TTabSheet;
     tbsUploadingPhotosDetails: TTabSheet;
     tbsUploadSetting: TTabSheet;
     trvFolderStructure: TTreeView;
     trvPicasaContacts: TTreeView;
     procedure actAddFolderToSycncronizationExecute(Sender: TObject);
-    procedure actCancelSyncronizationExecute(Sender: TObject);
-    procedure actCancelSyncronizationUpdate(Sender: TObject);
+    procedure actCancelSynchronizationExecute(Sender: TObject);
+    procedure actCancelSynchronizationUpdate(Sender: TObject);
     procedure actChangeOrCreateUserExecute(Sender: TObject);
     procedure actChangeOrCreateUserUpdate(Sender: TObject);
     procedure actClearAccessTokenExecute(Sender: TObject);
@@ -397,16 +397,16 @@ type
     procedure actLocatePicasaContactsXMLExecute(Sender: TObject);
     procedure actPrepareFolderStructureExecute(Sender: TObject);
     procedure actPrepareFolderStructureUpdate(Sender: TObject);
-    procedure actRemoveFolderFromSyncronizationExecute(Sender: TObject);
-    procedure actRemoveFolderFromSyncronizationUpdate(Sender: TObject);
+    procedure actRemoveFolderFromSynchronizationExecute(Sender: TObject);
+    procedure actRemoveFolderFromSynchronizationUpdate(Sender: TObject);
     procedure actReplacingPhotosExecute(Sender: TObject);
     procedure actReplacingPhotosUpdate(Sender: TObject);
     procedure actSaveResizedPhotosFolderExecute(Sender: TObject);
     procedure actSaveResizedPhotosFolderUpdate(Sender: TObject);
     procedure actSortAlbumsExecute(Sender: TObject);
     procedure actSortAlbumsUpdate(Sender: TObject);
-    procedure actSyncronizeExecute(Sender: TObject);
-    procedure actSyncronizeUpdate(Sender: TObject);
+    procedure actSynchronizeExecute(Sender: TObject);
+    procedure actSynchronizeUpdate(Sender: TObject);
     procedure actTestEchoExecute(Sender: TObject);
     procedure actTestLoginExecute(Sender: TObject);
     procedure actTestLoginUpdate(Sender: TObject);
@@ -430,7 +430,7 @@ type
     FActiveCollectFileDataThreads: TThreadList;
     FApplicationIniFile: string;
     FAvailableCollectFileDataThreads: TThreadList;
-    FCancelSyncronization: Boolean;
+    FCancelSynchronization: Boolean;
     FExcludeFolders: TListString;
     FFlickrAccessible: Boolean;
     FIncludeFolders: TListString;
@@ -441,7 +441,7 @@ type
     FProcessThreadsMaxCount: Integer;
     FReadyToProcess: Boolean;
     FSyncFileName: string;
-    FSyncronizing: Boolean;
+    FSynchronizing: Boolean;
     FSync_CollectFolderData: Boolean;
     FSync_DeleteUnknownAlbums: Boolean;
     FSync_LoadFlickrAlbums: Boolean;
@@ -512,7 +512,7 @@ type
     procedure SetReadyToProcess(const Value: Boolean);
     procedure SetRequestToken(const Value: string);
     procedure SetRequestTokenSecret(const Value: string);
-    procedure SetSyncronizing(const Value: Boolean);
+    procedure SetSynchronizing(const Value: Boolean);
     procedure SetUserID(const Value: string);
     procedure SetVerifierPIN(const Value: string);
     function ShowMessageDlg(
@@ -546,7 +546,7 @@ type
     property RequestToken: string read GetRequestToken write SetRequestToken;
     property RequestTokenSecret: string read GetRequestTokenSecret write SetRequestTokenSecret;
     property SyncFileName: string read GetSyncFileName;
-    property Syncronizing: Boolean read FSyncronizing write SetSyncronizing;
+    property Synchronizing: Boolean read FSynchronizing write SetSynchronizing;
     property UserID: string read GetUserID write SetUserID;
     property VerifierPIN: string read GetVerifierPIN write SetVerifierPIN;
   end;
@@ -587,10 +587,10 @@ var
   vOpt: TSelectDirFileDlgOpts;
   vDirs: TArray<string>;
 begin
-  if lstTopFoldersToSyncronize.ItemIndex <> -1 then
-    s := lstTopFoldersToSyncronize.Items[lstTopFoldersToSyncronize.ItemIndex]
-  else if lstTopFoldersToSyncronize.Count > 0 then
-    s := lstTopFoldersToSyncronize.Items[0]
+  if lstTopFoldersToSynchronize.ItemIndex <> -1 then
+    s := lstTopFoldersToSynchronize.Items[lstTopFoldersToSynchronize.ItemIndex]
+  else if lstTopFoldersToSynchronize.Count > 0 then
+    s := lstTopFoldersToSynchronize.Items[0]
   else
     s := '';
 
@@ -600,24 +600,24 @@ begin
   begin
     for vDir in vDirs do begin
       s := ExcludeTrailingPathDelimiter(vDir);
-      if lstTopFoldersToSyncronize.Items.IndexOf(s) = -1 then
-        lstTopFoldersToSyncronize.Items.Add(ExcludeTrailingPathDelimiter(s));
+      if lstTopFoldersToSynchronize.Items.IndexOf(s) = -1 then
+        lstTopFoldersToSynchronize.Items.Add(ExcludeTrailingPathDelimiter(s));
     end;
     FSync_CollectFolderData := False;
   end;
 
 end;
 
-procedure TFoldersToFlickrSyncrForm.actCancelSyncronizationExecute(Sender: TObject);
+procedure TFoldersToFlickrSyncrForm.actCancelSynchronizationExecute(Sender: TObject);
 begin
-  FCancelSyncronization := True;
+  FCancelSynchronization := True;
 
   CleanActiveThreads;
 end;
 
-procedure TFoldersToFlickrSyncrForm.actCancelSyncronizationUpdate(Sender: TObject);
+procedure TFoldersToFlickrSyncrForm.actCancelSynchronizationUpdate(Sender: TObject);
 begin
-  (Sender as TAction).Enabled := Syncronizing and not FCancelSyncronization;
+  (Sender as TAction).Enabled := Synchronizing and not FCancelSynchronization;
 end;
 
 procedure TFoldersToFlickrSyncrForm.actChangeOrCreateUserExecute(Sender: TObject);
@@ -645,7 +645,7 @@ end;
 
 procedure TFoldersToFlickrSyncrForm.actChangeOrCreateUserUpdate(Sender: TObject);
 begin
-  (Sender as TAction).Enabled := not Syncronizing and
+  (Sender as TAction).Enabled := not Synchronizing and
     Assigned(FUserIDCollection) and (FUserIDCollection.Count >= 0);
 end;
 
@@ -949,8 +949,8 @@ var
   vSections: TStringList;
   vLevel, vIsFamily, vIsFriend, vIsPublic: Integer;
 begin
-  for i := 0 to lstTopFoldersToSyncronize.Count - 1 do begin
-    vSourceFolder := lstTopFoldersToSyncronize.Items[i];
+  for i := 0 to lstTopFoldersToSynchronize.Count - 1 do begin
+    vSourceFolder := lstTopFoldersToSynchronize.Items[i];
 
     if System.SysUtils.DirectoryExists(vSourceFolder) then
     begin
@@ -1291,19 +1291,19 @@ end;
 
 procedure TFoldersToFlickrSyncrForm.actPrepareFolderStructureUpdate(Sender: TObject);
 begin
-  (Sender as TAction).Enabled := lstTopFoldersToSyncronize.Count > 0;
+  (Sender as TAction).Enabled := lstTopFoldersToSynchronize.Count > 0;
 end;
 
-procedure TFoldersToFlickrSyncrForm.actRemoveFolderFromSyncronizationExecute(Sender: TObject);
+procedure TFoldersToFlickrSyncrForm.actRemoveFolderFromSynchronizationExecute(Sender: TObject);
 begin
-  if lstTopFoldersToSyncronize.ItemIndex <> -1 then
-    lstTopFoldersToSyncronize.Items.Delete(lstTopFoldersToSyncronize.ItemIndex);
+  if lstTopFoldersToSynchronize.ItemIndex <> -1 then
+    lstTopFoldersToSynchronize.Items.Delete(lstTopFoldersToSynchronize.ItemIndex);
   FSync_CollectFolderData := False;
 end;
 
-procedure TFoldersToFlickrSyncrForm.actRemoveFolderFromSyncronizationUpdate(Sender: TObject);
+procedure TFoldersToFlickrSyncrForm.actRemoveFolderFromSynchronizationUpdate(Sender: TObject);
 begin
-  (Sender as TAction).Enabled := lstTopFoldersToSyncronize.ItemIndex <> -1;
+  (Sender as TAction).Enabled := lstTopFoldersToSynchronize.ItemIndex <> -1;
 end;
 
 procedure TFoldersToFlickrSyncrForm.actReplacingPhotosExecute(Sender: TObject);
@@ -1381,15 +1381,15 @@ begin
   (Sender as TAction).Enabled := IsFlickrAccessible and (memSortAlbums.Text <> '');
 end;
 
-procedure TFoldersToFlickrSyncrForm.actSyncronizeExecute(Sender: TObject);
+procedure TFoldersToFlickrSyncrForm.actSynchronizeExecute(Sender: TObject);
 begin
   SetTaskBarProgressState_Indeterminate(self.Handle);
 
   // save current setting in case appliction will be killed
   ApplicationIniFileWrite;
 
-  // set Flag - we are syncronizing
-  Syncronizing := True;
+  // set Flag - we are Synchronizing
+  Synchronizing := True;
 
   // set gFlickrSettings
   Sync_SetFlickrPermissions;
@@ -1402,9 +1402,9 @@ begin
 
 end;
 
-procedure TFoldersToFlickrSyncrForm.actSyncronizeUpdate(Sender: TObject);
+procedure TFoldersToFlickrSyncrForm.actSynchronizeUpdate(Sender: TObject);
 begin
-  (Sender as TAction).Enabled := IsFlickrAccessible and not Syncronizing;
+  (Sender as TAction).Enabled := IsFlickrAccessible and not Synchronizing;
 end;
 
 procedure TFoldersToFlickrSyncrForm.actTestEchoExecute(Sender: TObject);
@@ -1787,7 +1787,7 @@ begin
     edtResizeJpgQuality.Text := _ReadEdit(edtResizeJpgQuality);
     edtPlaceholderImageLocation.Text := vIniFile.ReadString(vSection, edtPlaceholderImageLocation.Name, 'placeholderimage.jpg');
 
-    _ReadList(vSection + '_' + lstTopFoldersToSyncronize.Name, lstTopFoldersToSyncronize.Items);
+    _ReadList(vSection + '_' + lstTopFoldersToSynchronize.Name, lstTopFoldersToSynchronize.Items);
     _ReadList(vSection + '_' + memExcludeFiles.Name, memExcludeFiles.Lines);
     _ReadList(vSection + '_' + memIncludeFiles.Name, memIncludeFiles.Lines);
     FIncompletedFolders.Clear;
@@ -1941,7 +1941,7 @@ begin
     _WriteEdit(edtResizeJpgQuality);
     _WriteLabeledEdit(edtPlaceholderImageLocation);
 
-    _WriteList(vSection + '_' + lstTopFoldersToSyncronize.Name, lstTopFoldersToSyncronize.Items);
+    _WriteList(vSection + '_' + lstTopFoldersToSynchronize.Name, lstTopFoldersToSynchronize.Items);
     _WriteList(vSection + '_' + memExcludeFiles.Name, memExcludeFiles.Lines);
     _WriteList(vSection + '_' + memIncludeFiles.Name, memIncludeFiles.Lines);
     if chkResumeFromIncompletedFolders.Checked and (FIncompletedFolders.Count > 0) then
@@ -1993,7 +1993,7 @@ begin
   begin
 
     vTreeNode := trvFolderStructure.Items.Add(nil, 'All Albums (' + FWorkLoad.PhotosCount.ToString + ')');
-    // folders for syncronization top folder
+    // folders for Synchronization top folder
     for vWorkFolder in FWorkLoad.WorkCollection.ToArray do begin
       trvFolderStructure.Items.AddChild(vTreeNode, vWorkFolder.AlbumName + ' (' + IntToStr(vWorkFolder.LocalPhotos.Count)+')').Expand(False);
     end;
@@ -2014,7 +2014,7 @@ begin
   if Assigned(FPhotoListsToProcess) and Assigned(FActiveCollectFileDataThreads) then
   begin
 
-    if FCancelSyncronization then
+    if FCancelSynchronization then
     begin
       FIncompletedFolders.Clear;
       if (FPhotoListsToProcess.Count > 0) then
@@ -2035,7 +2035,7 @@ begin
       try
 
         for i := 0 to vList.Count - 1 do begin
-          if FCancelSyncronization and (TThread(vList.Items[i]) is TCollectFileDataThread) then
+          if FCancelSynchronization and (TThread(vList.Items[i]) is TCollectFileDataThread) then
           begin
             v := TCollectFileDataThread(vList.Items[i]);
             FIncompletedFolders.Add(v.LocalFolderToProcess.SourceFolderFullName);
@@ -2311,7 +2311,7 @@ end;
 procedure TFoldersToFlickrSyncrForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 
-  FCancelSyncronization := False;
+  FCancelSynchronization := False;
 
   CleanActiveThreads;
 
@@ -2375,7 +2375,7 @@ begin
 
   AssignDefaultPopupMenu(Self);
 
-  actPrepareFolderStructure.Hint := 'Scan ' + Trim(grbTopFoldersToSyncronize.Caption);
+  actPrepareFolderStructure.Hint := 'Scan ' + Trim(grbTopFoldersToSynchronize.Caption);
 
 end;
 
@@ -2708,7 +2708,7 @@ begin
 
   //pnlStructureData.Enabled := True;
 
-  if not FCancelSyncronization then
+  if not FCancelSynchronization then
   begin
     if not Sync_LoadFlickrAlbums then
       CustomMessageDlg(Self, 'Failed to Load Flickr Albums!', mtError, [mbOK], mbOK);
@@ -2719,14 +2719,14 @@ begin
     if not Sync_ReorderAlbums then
       CustomMessageDlg(Self, 'Failed to Reorder Albums!', mtError, [mbOK], mbOK);
 
-    memSyncronizatioLog.Lines.Add('Syncronization complete');
+    memSynchronizatioLog.Lines.Add('Synchronization complete');
 
-    memSyncronizatioLog.Lines.SaveToFile(ChangeFileExt(Application.ExeName, '.syncronization.log'));
+    memSynchronizatioLog.Lines.SaveToFile(ChangeFileExt(Application.ExeName, '.Synchronization.log'));
     memActionsLog.Lines.SaveToFile(ChangeFileExt(Application.ExeName, '.actions.log'));
     memErrorsLog.Lines.SaveToFile(ChangeFileExt(Application.ExeName, '.errors.log'));
   end;
 
-  Syncronizing := False;
+  Synchronizing := False;
 
 end;
 
@@ -2801,7 +2801,7 @@ begin
       begin
         vActiveList.Remove(vCollectFileDataThread);
         vAvailableList.Add(vCollectFileDataThread);
-        if not FCancelSyncronization and not vCollectFileDataThread.LocalFolderToProcess.IsUploadCompleteForAllPhotos then
+        if not FCancelSynchronization and not vCollectFileDataThread.LocalFolderToProcess.IsUploadCompleteForAllPhotos then
         begin
           // return this folder into collection to reprocess
           FPhotoListsToProcess.Add(vCollectFileDataThread.LocalFolderToProcess);
@@ -2812,8 +2812,8 @@ begin
         if i <> -1 then
         begin
           ThreadsList[i] := 0;
-          grdThreadsData.Cells[0, i + 1] := IfThen(FCancelSyncronization, 'Terminated', 'Completed');
-          grdThreadsData.Cells[5, i + 1] := IfThen(FCancelSyncronization, '', '100%');
+          grdThreadsData.Cells[0, i + 1] := IfThen(FCancelSynchronization, 'Terminated', 'Completed');
+          grdThreadsData.Cells[5, i + 1] := IfThen(FCancelSynchronization, '', '100%');
         end;
 
         while (ProcessThreadsMaxCount < Length(ThreadsList)) do begin
@@ -2836,7 +2836,7 @@ begin
         edtThreadsActive.Update;
         edtThreadsCompleted.Text := IntToStr(vAvailableList.Count);
         edtThreadsCompleted.Update;
-        if not FCancelSyncronization then
+        if not FCancelSynchronization then
           FIncompletedFolders.Clear;
         CreateCleanUpThread;
         prbProgress.Visible := False;
@@ -3172,20 +3172,20 @@ begin
   OAuthAuthenticator.RequestTokenSecret := Value;
 end;
 
-procedure TFoldersToFlickrSyncrForm.SetSyncronizing(const Value: Boolean);
+procedure TFoldersToFlickrSyncrForm.SetSynchronizing(const Value: Boolean);
 begin
-  FSyncronizing := Value;
-  if FSyncronizing then
+  FSynchronizing := Value;
+  if FSynchronizing then
   begin
     SetTaskBarProgressState_Indeterminate(Self.Handle);
-    LogActionMessage(memActionsLog.Lines, '*** Full Syncronization Starts ***', True);
-    gSyncronizationTime := Now;
-    FCancelSyncronization := False;
+    LogActionMessage(memActionsLog.Lines, '*** Full Synchronization Starts ***', True);
+    gSynchronizationTime := Now;
+    FCancelSynchronization := False;
 
     // clean up GUI
-    actCancelSyncronization.Update;
+    actCancelSynchronization.Update;
     actChangeOrCreateUser.Update;
-    actSyncronize.Update;
+    actSynchronize.Update;
     edtErrors.Text := '0';
     edtPhotosProcessed.Text := '0';
     edtPhotosProcessed.Update;
@@ -3197,8 +3197,8 @@ begin
     memErrorsLog.Update;
     memActionsLog.Clear;
     memActionsLog.Update;
-    memSyncronizatioLog.Clear;
-    memSyncronizatioLog.Update;
+    memSynchronizatioLog.Clear;
+    memSynchronizatioLog.Update;
 
     // initialize global variables
     gAlbumsCreated := 0;
@@ -3221,7 +3221,7 @@ begin
     gPhotoUploads :=  0;
     gResizeJpgQuality := Max(Min(100, StrToInt(edtResizeJpgQuality.Text)), 50);
     gResolvedErrors := 0;
-    gSyncronizationTime := Now;
+    gSynchronizationTime := Now;
     gUploadedSize :=  0;
     gSetImageDescription := chkSetImageDescription.Checked;
     gPriorityPermissionsFlickr := rgpPriorityPermissions.ItemIndex = 0;
@@ -3239,8 +3239,8 @@ begin
 
   end else begin
     SetTaskBarProgressState_NoProgress(Self.Handle);
-    LogActionMessage(memActionsLog.Lines, '*** Full Syncronization Finished ***', True);
-    edtSyncronizationTime.Text := FormatDateTime('HH:MM:SS', Now - gSyncronizationTime);
+    LogActionMessage(memActionsLog.Lines, '*** Full Synchronization Finished ***', True);
+    edtSynchronizationTime.Text := FormatDateTime('HH:MM:SS', Now - gSynchronizationTime);
     gImageUniqueIDList.Clear;
     FreeAndNil(gFlickrAlbums);
     ClearFlickrPhotosNotInSet;
@@ -3335,7 +3335,7 @@ end;
 function TFoldersToFlickrSyncrForm.Sync_ApplyPicasaSettings: boolean;
 begin
   Result := True;
-  if FCancelSyncronization then
+  if FCancelSynchronization then
     Exit;
 
   SetTaskBarProgressState_Indeterminate(self.Handle);
@@ -3364,7 +3364,7 @@ var
   vTmpItems: TStringList;
 begin
   Result := True;
-  if FCancelSyncronization then
+  if FCancelSynchronization then
     Exit;
 
   edtFoldersScanned.Text := '0';
@@ -3391,10 +3391,10 @@ begin
   FWorkCollectionsFromFolders.Clear;
   lstAlbumsFromFolders.Clear;
 
-  for i := 0 to lstTopFoldersToSyncronize.Count - 1 do begin
-    if FCancelSyncronization then
+  for i := 0 to lstTopFoldersToSynchronize.Count - 1 do begin
+    if FCancelSynchronization then
       Exit;
-    Result := Sync_CollectFoldersAndFilesForTopFolder(lstTopFoldersToSyncronize.Items[i]);
+    Result := Sync_CollectFoldersAndFilesForTopFolder(lstTopFoldersToSynchronize.Items[i]);
     if not Result then
       Exit;
   end;
@@ -3432,7 +3432,7 @@ begin
 
   BuildTreeStructure;
 
-  lblAlbumsFromFoldersBottom.Caption := IntToStr(lstAlbumsFromFolders.Count) + ' Albums to Syncronize';
+  lblAlbumsFromFoldersBottom.Caption := IntToStr(lstAlbumsFromFolders.Count) + ' Albums to Synchronize';
 
   Result := gWorkAlbumsFromFolders.Count > 0;
   FSync_CollectFolderData := Result;
@@ -3440,7 +3440,7 @@ begin
   TopFoldersChanged;
 
   if not Result then
-    lblError.Caption := 'No Albums/Photos to Syncronize!';
+    lblError.Caption := 'No Albums/Photos to Synchronize!';
 
 end;
 
@@ -3454,7 +3454,7 @@ begin
 
   Result := True;
 
-  if FCancelSyncronization then
+  if FCancelSynchronization then
     Exit;
 
   Assert(SyncFileName <> '');
@@ -3506,7 +3506,7 @@ begin
           for vExistedFolder in FWorkLoad.WorkCollection.ToArray do begin
             if SameText(vExistedFolder.AlbumName, vFolder.AlbumName) then
             begin
-              memSyncronizatioLog.Lines.Add(Format('Merged Album "%s" will be created', [vFolder.AlbumName]));
+              memSynchronizatioLog.Lines.Add(Format('Merged Album "%s" will be created', [vFolder.AlbumName]));
               vFolder.Free;
               vFolder := vExistedFolder;
               Break;
@@ -3601,14 +3601,14 @@ begin
   begin
     LogActionActivity('--- Deleting Unknown Albums ---');
     ActionMessage('Deleting Unknown Albums');
-    memSyncronizatioLog.Lines.Add('Deleting Unknown Albums');
+    memSynchronizatioLog.Lines.Add('Deleting Unknown Albums');
     vRequiredAlbums := TListString.Create;
     try
 
       vRequiredAlbums.AddRange(gWorkAlbumsFromFolders.Values.ToArray);
 
       for vAlbumID in gFlickrAlbums.Keys.ToArray do begin
-        if FCancelSyncronization then
+        if FCancelSynchronization then
           Exit;
         vAlbumName := gFlickrAlbums.Items[vAlbumID];
         if not vRequiredAlbums.Contains(vAlbumName) then
@@ -3686,7 +3686,7 @@ begin
 
   LogActionActivity('--- Loading Albums from Flickr ---');
   ActionMessage('Loading Albums from Flickr');
-  memSyncronizatioLog.Lines.Add('Loading Albums from Flickr');
+  memSynchronizatioLog.Lines.Add('Loading Albums from Flickr');
 
   vPageNo := 1;
   vProcessed := 0;
@@ -3708,7 +3708,7 @@ begin
 
   repeat
 
-    if FCancelSyncronization then
+    if FCancelSynchronization then
       Exit;
 
     if ExecuteAPIMethod(Get_photosets_getList('', IntToStr(vPageNo), '500', ''), vXML) then
@@ -3769,7 +3769,7 @@ var
 begin
   // now set order of albums and assign collections
   vAlbumListIDs := '';
-  memSyncronizatioLog.Lines.Add('Reorder Albums');
+  memSynchronizatioLog.Lines.Add('Reorder Albums');
 
   // for vWorkFolder in vWorkFolderList.ToArray do begin
   for i := 0 to FWorkLoad.WorkCollection.Count - 1 do begin
@@ -3820,7 +3820,7 @@ var
   vResponseText, vUploadedPhotoID, vTicketID: String;
 begin
   Result := True;
-  if FCancelSyncronization then
+  if FCancelSynchronization then
     Exit;
 
   SetTaskBarProgressState_Indeterminate(self.Handle);
@@ -3905,7 +3905,7 @@ var
 begin
   FReadyToProcess := False;
   Result := True;
-  if FCancelSyncronization then
+  if FCancelSynchronization then
     Exit;
 
   SetTaskBarProgressState_Indeterminate(self.Handle);
@@ -3937,7 +3937,7 @@ begin
   begin
     vLastIncompleted := FIncompletedFolders[0];
     for vWorkFolder in FWorkLoad.WorkCollection.ToArray do begin
-      if FCancelSyncronization then
+      if FCancelSynchronization then
         Exit;
 
       if FIncompletedFolders.IndexOf(vWorkFolder.SourceFolderFullName) <> -1 then
@@ -3960,7 +3960,7 @@ begin
 
   // collect all folders - duplicates will be ignored
   for vWorkFolder in FWorkLoad.WorkCollection.ToArray do begin
-    if FCancelSyncronization then
+    if FCancelSynchronization then
       Exit;
     InitializeProcessThread(vWorkFolder, ipAdd);
   end;
@@ -4068,7 +4068,7 @@ begin
 
           ProgressBarPosition := TInterlocked.Read(gPhotosProcessed);
 
-          edtSyncronizationTime.Text := FormatDateTime('HH:MM:SS', Now - gSyncronizationTime);
+          edtSynchronizationTime.Text := FormatDateTime('HH:MM:SS', Now - gSynchronizationTime);
           edtAlbumsCreated.Text := IntToStr(TInterlocked.Read(gAlbumsCreated));
         end;
 
@@ -4091,7 +4091,7 @@ begin
       TH_LOG_TO_PHOTOLOG:
         begin
           vMessage := PString(Message.LParam);
-          memSyncronizatioLog.Lines.Add(vMessage^);
+          memSynchronizatioLog.Lines.Add(vMessage^);
           Dispose(vMessage);
         end;
 
@@ -4116,13 +4116,13 @@ end;
 
 procedure TFoldersToFlickrSyncrForm.TopFoldersChanged;
 begin
-  if lstTopFoldersToSyncronize.Count > 0 then
+  if lstTopFoldersToSynchronize.Count > 0 then
   begin
-    lblFoldersWithAlbums.Caption := Format('In %d Folder(s) - %d Albums and %d Photos to Syncronize',
+    lblFoldersWithAlbums.Caption := Format('In %d Folder(s) - %d Albums and %d Photos to Synchronize',
       [FWorkLoad.WorkCollection.Count, FWorkLoad.AlbumsCount, FWorkLoad.PhotosCount]);
     lblFoldersWithAlbums.Font.Color := clGreen;
   end else begin
-    lblFoldersWithAlbums.Caption := 'Folders contain no data for Syncronization';
+    lblFoldersWithAlbums.Caption := 'Folders contain no data for Synchronization';
     lblFoldersWithAlbums.Font.Color := clRed;
   end;
 end;
