@@ -2517,40 +2517,37 @@ function TLocalPhoto.CreateResizedJPG: Boolean;
 
   procedure __SmoothResize(const aSrc, aDst: Vcl.Graphics.TBitmap);
   var
-    x, y, xP, yP, xP2, yP2: Integer;
-    vSrcLine1, vSrcLine2: pRGBArray;
-    t3, z, z2, iz2: Integer;
-    vDstLine: pRGBArray;
-    vDstGap, w1, w2, w3, w4: Integer;
+    x, y, xP, yP, xP2, yP2, w1, w2, w3, w4, t3, z, z2, iz2: Integer;
+    vSrcLine1, vSrcLine2, vDstLine: pRGBArray;
+    vRed, vGreen, vBlue: Cardinal;
   begin
     aSrc.PixelFormat := pf24Bit;
     aDst.PixelFormat := pf24Bit;
 
     if ((aSrc.Width = aDst.Width) and (aSrc.Height = aDst.Height)) or (aDst.Width <=1) or (aDst.Height <=1) then
     begin
-      aDst.Assign(aSrc)
+      aDst.Assign(aSrc);
     end else begin
-      vDstLine := aDst.ScanLine[0];
-      vDstGap  := Integer(aDst.ScanLine[1]) - Integer(vDstLine);
 
       xP2 := MulDiv(pred(aSrc.Width), $10000, aDst.Width);
       yP2 := MulDiv(pred(aSrc.Height), $10000, aDst.Height);
       yP  := 0;
 
-      for y := 0 to pred(aDst.Height) do
+      for y := 0 to aDst.Height - 1 do
       begin
+        vDstLine := aDst.ScanLine[y];
         xP := 0;
 
         vSrcLine1 := aSrc.ScanLine[yP shr 16];
 
-        if (yP shr 16 < pred(aSrc.Height)) then
+        if (yP shr 16 < Pred(aSrc.Height)) then
           vSrcLine2 := aSrc.ScanLine[succ(yP shr 16)]
         else
           vSrcLine2 := aSrc.ScanLine[yP shr 16];
 
-        z2  := succ(yP and $FFFF);
-        iz2 := succ((not yp) and $FFFF);
-        for x := 0 to pred(aDst.Width) do
+        z2  := Succ(yP and $FFFF);
+        iz2 := Succ((not yp) and $FFFF);
+        for x := 0 to aDst.Width - 1 do
         begin
           t3 := xP shr 16;
           z  := xP and $FFFF;
@@ -2558,24 +2555,21 @@ function TLocalPhoto.CreateResizedJPG: Boolean;
           w1 := iz2 - w2;
           w4 := MulDiv(z, z2, $10000);
           w3 := z2 - w4;
-          vDstLine[x].rgbtRed := (vSrcLine1[t3].rgbtRed * w1 +
-            vSrcLine1[t3 + 1].rgbtRed * w2 +
+          vRed := (vSrcLine1[t3].rgbtRed * w1 + vSrcLine1[t3 + 1].rgbtRed * w2 +
             vSrcLine2[t3].rgbtRed * w3 + vSrcLine2[t3 + 1].rgbtRed * w4) shr 16;
-          vDstLine[x].rgbtGreen :=
-            (vSrcLine1[t3].rgbtGreen * w1 + vSrcLine1[t3 + 1].rgbtGreen * w2 +
-
+          vDstLine[x].rgbtRed := vRed;
+          vGreen := (vSrcLine1[t3].rgbtGreen * w1 + vSrcLine1[t3 + 1].rgbtGreen * w2 +
             vSrcLine2[t3].rgbtGreen * w3 + vSrcLine2[t3 + 1].rgbtGreen * w4) shr 16;
-          vDstLine[x].rgbtBlue := (vSrcLine1[t3].rgbtBlue * w1 +
-            vSrcLine1[t3 + 1].rgbtBlue * w2 +
-            vSrcLine2[t3].rgbtBlue * w3 +
-            vSrcLine2[t3 + 1].rgbtBlue * w4) shr 16;
+          vDstLine[x].rgbtGreen := vGreen;
+          vBlue := (vSrcLine1[t3].rgbtBlue * w1 + vSrcLine1[t3 + 1].rgbtBlue * w2 +
+            vSrcLine2[t3].rgbtBlue * w3 + vSrcLine2[t3 + 1].rgbtBlue * w4) shr 16;
+          vDstLine[x].rgbtBlue := vBlue;
           Inc(xP, xP2);
         end; {for}
         Inc(yP, yP2);
-        vDstLine := pRGBArray(Integer(vDstLine) + vDstGap);
       end; {for}
     end; {if}
-  end; {SmoothResize}
+  end;
 
   procedure __AddKeyWord(var aKeywords: TIPTCStringArray; const aKeyWord: string);
 
@@ -2859,8 +2853,7 @@ begin
       vJpegEx.ExifData.SaveToGraphic(FResizedPhotoFileName);
       vJpegEx.IPTCData.SaveToGraphic(FResizedPhotoFileName);
       vJpegEx.XMPPacket.SaveToGraphic(FResizedPhotoFileName);
-      //FileSetDate(FResizedPhotoFileName, DateTimeToFileDate(DateTimeOriginal));
-      FileSetDate(FResizedPhotoFileName, DateTimeToFileDate(Now));
+      FileSetDate(FResizedPhotoFileName, DateTimeToFileDate(DateTimeOriginal));
 
       Result := True;
 
@@ -3498,8 +3491,7 @@ begin
               Exit;
             end;
 
-//            FileSetDate(FPhotoFileName, DateTimeToFileDate(DateTimeOriginal));
-            FileSetDate(FPhotoFileName, DateTimeToFileDate(Now));
+            FileSetDate(FPhotoFileName, DateTimeToFileDate(DateTimeOriginal));
           end;
 
         except
@@ -3758,7 +3750,6 @@ procedure TLocalPhoto.SetFileMD5(const Value: String);
 begin
   if not SameText(FFileMD5, Value) then
   begin
-    FileSetDate(FPhotoFileName, DateTimeToFileDate(Now));
     FChanged_File := True;
   end;
 
