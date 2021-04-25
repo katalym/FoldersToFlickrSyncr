@@ -12,6 +12,7 @@ uses
   Vcl.Forms,
   WinApi.Windows,
   FoldersToFlickrSyncrFrm in 'FoldersToFlickrSyncrFrm.pas' {FoldersToFlickrSyncrForm},
+  XMLSupportUnit in 'XMLSupportUnit.pas',
   FoldersToFlickrSyncrSupportUnit in 'FoldersToFlickrSyncrSupportUnit.pas',
   FoldersToFlickrSyncrMethodsUnit in 'FoldersToFlickrSyncrMethodsUnit.pas',
   FoldersToFlickrSyncrMethodsClassesUnit in 'FoldersToFlickrSyncrMethodsClassesUnit.pas',

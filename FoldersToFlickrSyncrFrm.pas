@@ -12,10 +12,10 @@ uses
   FoldersToFlickrSyncrSupportUnit, FoldersToFlickrSyncrMethodsClassesUnit, IdHTTP,
   IdSSLOpenSSL, IdHeaderList, System.Generics.Collections, System.Types,
   IdTCPConnection, Vcl.Menus, Vcl.ActnPopup, Vcl.ExtDlgs, Vcl.Grids, Vcl.Samples.Spin,
-  Windows7SupportUnit, Vcl.CheckLst, REST.Types, Data.Bind.EngExt, Vcl.Bind.DBEngExt, System.Rtti,
-  System.Bindings.Outputs, Vcl.Bind.Editors, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
-  IdIOHandler, IdIOHandlerSocket, IdIOHandlerStack, IdSSL, IdBaseComponent, IdComponent, IdTCPClient,
-  Data.Bind.ObjectScope;
+  Windows7SupportUnit, Vcl.CheckLst, REST.Types,
+  XMLSupportUnit, Data.Bind.EngExt, Vcl.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs, Vcl.Bind.Editors,
+  System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls, IdIOHandler, IdIOHandlerSocket, IdIOHandlerStack,
+  IdSSL, IdBaseComponent, IdComponent, IdTCPClient, Data.Bind.ObjectScope;
 
 type
   TFoldersToFlickrSyncrForm = class(TForm)
