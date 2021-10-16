@@ -1,8 +1,8 @@
 program FoldersToFlickrSyncr;
 
 uses
-  {$IFDEF DEBUG}
   FastMM5 in 'FastMM5.pas',
+  {$IFDEF DEBUG}
   madExcept,
   madLinkDisAsm,
   madListHardware,
